@@ -1,0 +1,15 @@
+<processes>
+  <process name="HOWTO_CONSOLIDATORS_MANAGER">
+    <groupId>HOWTO_CONSOLIDATORS</groupId>
+    <start>true</start>
+    <options>-Xmx512m -DRedirectStreamsToLog=true</options>
+    <module>genesis-pal-consolidator,genesis-pal-eventhandler,genesis-pal-requestserver,genesis-pal-dataserver</module>
+    <package>global.genesis.dataserver.pal,global.genesis.eventhandler.pal,global.genesis.pipeline,global.genesis.pal.consolidator</package>
+    <script>howto-consolidators-eventhandler.kts,howto-consolidators-reqrep.kts,howto-consolidators-dataserver.kts,howto-consolidators-example1-consolidator.kts,howto-consolidators-example2-consolidator.kts,howto-consolidators-example3-consolidator.kts</script>
+    <description>Management of eventhandler, request server and data server processes</description>
+    <classpath>howto-consolidators-app*</classpath>
+    <loggingLevel>DEBUG</loggingLevel>
+    <language>pal</language>
+    <arguments>--coldStart</arguments>
+  </process>
+</processes>
