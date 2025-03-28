@@ -1,0 +1,6 @@
+systemDefinition {
+  global {
+  }
+  systems {
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "apiHost": "ws://localhost:9064",
+  "enableSSO": false,
+  "description": "Project Template for howto-consolidators",
+  "groupId": "global.genesis",
+  "applicationVersion": "1.0.0-SNAPSHOT",
+  "enableDeployPlugin": false,
+  "excludeGradleWrapper": false,
+  "csv": [
+    {
+      "name": "TRADE",
+      "fields": [
+        "TRADE_TIME",
+        "TRADE_TYPE",
+        "PRICE",
+        "QUANTITY",
+        "TRADED"
+      ]
+    },
+    {
+      "name": "CONSUMER_PRICE_INDEX",
+      "fields": [
+        "RELEASE_DATE",
+        "VALUE"
+      ]
+    },
+    {
+      "name": "COUNTED",
+      "fields": [
+        "BUY_TRADED",
+        "SELL_TRADED"
+      ]
+    },
+    {
+      "name": "RIGHT",
+      "fields": [
+        "CODE",
+        "DESCRIPTION"
+      ],
+      "data": []
+    },
+    {
+      "name": "PROFILE",
+      "fields": [
+        "NAME",
+        "DESCRIPTION",
+        "STATUS"
+      ],
+      "data": []
+    },
+    {
+      "name": "PROFILE_RIGHT",
+      "fields": [
+        "PROFILE_NAME",
+        "RIGHT_CODE"
+      ],
+      "data": []
+    }
+  ],
+  "framework": "react",
+  "ui": {},
+  "routes": [
+    {
+      "name": "HOME",
+      "layoutType": "horizontal-layout",
+      "permissions": null,
+      "tiles": [],
+      "layoutKey": "HOME_1737996844038",
+      "FDC3EventHandlersEnabled": false
+    },
+    {
+      "name": "Example 1",
+      "layoutType": "horizontal-layout",
+      "permissions": null,
+      "tiles": [],
+      "layoutKey": "Example 1_1737996844038",
+      "FDC3EventHandlersEnabled": false
+    },
+    {
+      "name": "Example 2",
+      "layoutType": "horizontal-layout",
+      "permissions": null,
+      "tiles": [],
+      "layoutKey": "Example 2_1737996844038",
+      "FDC3EventHandlersEnabled": false
+    },
+    {
+      "name": "Example 3",
+      "layoutType": "horizontal-layout",
+      "permissions": null,
+      "tiles": [],
+      "layoutKey": "Example 3_1737996844038",
+      "FDC3EventHandlersEnabled": false
+    },
+    {
+      "name": "Example 4",
+      "layoutType": "horizontal-layout",
+      "permissions": null,
+      "tiles": [],
+      "layoutKey": "Example 4_1737996844038",
+      "FDC3EventHandlersEnabled": false
+    }
+  ],
+  "appName": "howto-consolidators",
+  "pkgName": "howtoconsolidators",
+  "directory": "howto-consolidators",
+  "appSeed": {
+    "type": "local",
+    "name": "blank-app-seed",
+    "description": "Genesis Blank App Seed Configuration",
+    "version": "3.39.4",
+    "date": "2025-01-27T16:54:04.032Z"
+  },
+  "rootElement": "howtoconsolidators-root",
+  "localGenId": "HOWTO_CONSOLIDATORS",
+  "applicationVersionWeb": "1.0.0",
+  "versions": {
+    "UI": "14.226.1",
+    "GSF": "8.7.2",
+    "Auth": "8.7.0"
+  },
+  "FDC3": {
+    "includeDependencies": false,
+    "channels": []
+  },
+  "additions": [
+    {
+      "apiHost": "ws://localhost:9064",
+      "enableSSO": false,
+      "description": "Project Template for howto-consolidators",
+      "groupId": "global.genesis",
+      "applicationVersion": "1.0.0-SNAPSHOT",
+      "enableDeployPlugin": false,
+      "excludeGradleWrapper": false,
+      "csv": [
+        {
+          "name": "TRADE",
+          "fields": [
+            "TRADE_TIME",
+            "TRADE_TYPE",
+            "PRICE",
+            "QUANTITY",
+            "TRADED"
+          ]
+        },
+        {
+          "name": "CONSUMER_PRICE_INDEX",
+          "fields": [
+            "RELEASE_DATE",
+            "VALUE"
+          ]
+        },
+        {
+          "name": "COUNTED",
+          "fields": [
+            "BUY_TRADED",
+            "SELL_TRADED"
+          ]
+        },
+        {
+          "name": "RIGHT",
+          "fields": [
+            "CODE",
+            "DESCRIPTION"
+          ],
+          "data": []
+        },
+        {
+          "name": "PROFILE",
+          "fields": [
+            "NAME",
+            "DESCRIPTION",
+            "STATUS"
+          ],
+          "data": []
+        },
+        {
+          "name": "PROFILE_RIGHT",
+          "fields": [
+            "PROFILE_NAME",
+            "RIGHT_CODE"
+          ],
+          "data": []
+        }
+      ],
+      "framework": "react",
+      "ui": {},
+      "routes": [
+        {
+          "name": "HOME",
+          "layoutType": "horizontal-layout",
+          "permissions": null,
+          "tiles": [],
+          "layoutKey": "HOME_1737996844038",
+          "FDC3EventHandlersEnabled": false
+        },
+        {
+          "name": "Example 1",
+          "layoutType": "horizontal-layout",
+          "permissions": null,
+          "tiles": [],
+          "layoutKey": "Example 1_1737996844038",
+          "FDC3EventHandlersEnabled": false
+        },
+        {
+          "name": "Example 2",
+          "layoutType": "horizontal-layout",
+          "permissions": null,
+          "tiles": [],
+          "layoutKey": "Example 2_1737996844038",
+          "FDC3EventHandlersEnabled": false
+        },
+        {
+          "name": "Example 3",
+          "layoutType": "horizontal-layout",
+          "permissions": null,
+          "tiles": [],
+          "layoutKey": "Example 3_1737996844038",
+          "FDC3EventHandlersEnabled": false
+        },
+        {
+          "name": "Example 4",
+          "layoutType": "horizontal-layout",
+          "permissions": null,
+          "tiles": [],
+          "layoutKey": "Example 4_1737996844038",
+          "FDC3EventHandlersEnabled": false
+        }
+      ],
+      "appName": "howto-consolidators",
+      "pkgName": "howto-consolidators",
+      "directory": "/tmp/tmp-19-MYpeqEbzXHGz/howto-consolidators",
+      "appSeed": {
+        "type": "local",
+        "name": "pbc-auth-seed",
+        "date": "2025-01-27T16:54:04.551Z"
+      },
+      "rootElement": "howtoconsolidators-root",
+      "localGenId": "HOWTO_CONSOLIDATORS",
+      "applicationVersionWeb": "1.0.0",
+      "versions": {
+        "prerequisites": {
+          "foundationUI": "14.*",
+          "gsf": "8.*"
+        },
+        "dependencies": {
+          "authClientVersion": "1.0.9",
+          "authServerVersion": "8.7.0"
+        }
+      },
+      "FDC3": {
+        "includeDependencies": false,
+        "channels": []
+      },
+      "date": "Mon Jan 27 2025 16:54:04 GMT+0000 (Coordinated Universal Time)",
+      "utils": {
+        "changeCase": {}
+      }
+    }
+  ]
+}

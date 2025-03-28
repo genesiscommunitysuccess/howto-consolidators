@@ -1,0 +1,6 @@
+ISIN,REGION,COMPANY,NAME,TICKER
+"NAIN","NA","MSFT company","instrument 1","MSFT"
+"EUIN","EU","EU company","instrument 2","EU"
+"APACIN","APAC","APAC company","instrument 3","AP"
+"LATAMIN","LATAM","LATAM company","instrument 4","LA"
+"MEAIN","MEA","MEA company","instrument 5","MEA"
