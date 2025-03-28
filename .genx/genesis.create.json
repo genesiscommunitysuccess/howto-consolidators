@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "version": "1.172.0",
+    "generated": "Mon, 27 Jan 2025 16:54:04 GMT"
+  },
+  "data": {
+    "projectName": "howto-consolidators",
+    "description": "Project Template for howto-consolidators",
+    "components": [
+      "GenesisServerCore",
+      "User Authorization",
+      "DataServerCore",
+      "ConsolidatorCore",
+      "EventHandlersCore"
+    ],
+    "tables": [
+      {
+        "name": "TRADE",
+        "id": 11000,
+        "primaryKey": {
+          "id": null,
+          "name": null,
+          "fields": [
+            "TRADE_ID"
+          ],
+          "indexType": "UNIQUE"
+        },
+        "fields": [
+          {
+            "name": "TRADE_TIME",
+            "type": "DATETIME",
+            "nullable": false
+          },
+          {
+            "name": "TRADE_TYPE",
+            "type": "ENUM",
+            "defaultValue": "BUY",
+            "values": [
+              "BUY",
+              "SELL"
+            ],
+            "nullable": false
+          },
+          {
+            "name": "PRICE",
+            "nullable": false,
+            "type": "BIGDECIMAL"
+          },
+          {
+            "name": "QUANTITY",
+            "nullable": false,
+            "type": "BIGDECIMAL"
+          },
+          {
+            "name": "TRADED",
+            "type": "BOOLEAN",
+            "defaultValue": false,
+            "nullable": false
+          }
+        ],
+        "generatedFields": [
+          {
+            "fieldType": "STRING",
+            "generatedFieldType": "SEQUENCE",
+            "name": "TRADE_ID",
+            "sequence": "TI",
+            "useUUID": false
+          }
+        ],
+        "audit": false,
+        "generateCreateUpdateDelete": true,
+        "snapshot": true,
+        "realtimeQueries": [],
+        "indices": [],
+        "meta": {
+          "attrOrder": [
+            "TRADE_ID",
+            "TRADE_TIME",
+            "TRADE_TYPE",
+            "PRICE",
+            "QUANTITY",
+            "TRADED"
+          ]
+        }
+      },
+      {
+        "name": "CONSUMER_PRICE_INDEX",
+        "id": 11001,
+        "primaryKey": {
+          "id": null,
+          "name": null,
+          "fields": [
+            "INDEX_ID"
+          ],
+          "indexType": "UNIQUE"
+        },
+        "fields": [
+          {
+            "name": "RELEASE_DATE",
+            "type": "DATE",
+            "nullable": false
+          },
+          {
+            "name": "VALUE",
+            "nullable": false,
+            "type": "BIGDECIMAL"
+          }
+        ],
+        "generatedFields": [
+          {
+            "fieldType": "STRING",
+            "generatedFieldType": "SEQUENCE",
+            "name": "INDEX_ID",
+            "sequence": "II",
+            "useUUID": false
+          }
+        ],
+        "audit": false,
+        "generateCreateUpdateDelete": true,
+        "snapshot": true,
+        "realtimeQueries": [],
+        "indices": [],
+        "meta": {
+          "attrOrder": [
+            "INDEX_ID",
+            "RELEASE_DATE",
+            "VALUE"
+          ]
+        }
+      },
+      {
+        "name": "COUNTED",
+        "id": 11002,
+        "primaryKey": {
+          "id": null,
+          "name": null,
+          "fields": [
+            "COUNTED_TRADED"
+          ],
+          "indexType": "UNIQUE"
+        },
+        "fields": [
+          {
+            "name": "BUY_TRADED",
+            "nullable": false,
+            "type": "INT"
+          },
+          {
+            "name": "SELL_TRADED",
+            "nullable": false,
+            "type": "INT"
+          }
+        ],
+        "generatedFields": [
+          {
+            "fieldType": "STRING",
+            "generatedFieldType": "SEQUENCE",
+            "name": "COUNTED_TRADED",
+            "sequence": "CT",
+            "useUUID": false
+          }
+        ],
+        "audit": false,
+        "generateCreateUpdateDelete": true,
+        "snapshot": true,
+        "realtimeQueries": [],
+        "indices": [],
+        "meta": {
+          "attrOrder": [
+            "COUNTED_TRADED",
+            "BUY_TRADED",
+            "SELL_TRADED"
+          ]
+        }
+      }
+    ],
+    "eventHandlers": [
+      {
+        "entityName": "TRADE",
+        "create": {
+          "enabled": true
+        },
+        "update": {
+          "enabled": true
+        },
+        "delete": {
+          "enabled": true
+        },
+        "type": "crud"
+      },
+      {
+        "entityName": "CONSUMER_PRICE_INDEX",
+        "create": {
+          "enabled": true
+        },
+        "update": {
+          "enabled": true
+        },
+        "delete": {
+          "enabled": true
+        },
+        "type": "crud"
+      },
+      {
+        "entityName": "COUNTED",
+        "create": {
+          "enabled": true
+        },
+        "update": {
+          "enabled": true
+        },
+        "delete": {
+          "enabled": true
+        },
+        "type": "crud"
+      }
+    ],
+    "consolidators": [],
+    "pipelines": [],
+    "ui": {
+      "config": null,
+      "routes": [
+        {
+          "name": "HOME",
+          "layoutType": null,
+          "permissions": null,
+          "tiles": []
+        },
+        {
+          "name": "Example 1",
+          "layoutType": null,
+          "permissions": null,
+          "tiles": []
+        },
+        {
+          "name": "Example 2",
+          "layoutType": null,
+          "permissions": null,
+          "tiles": []
+        },
+        {
+          "name": "Example 3",
+          "layoutType": null,
+          "permissions": null,
+          "tiles": []
+        },
+        {
+          "name": "Example 4",
+          "layoutType": null,
+          "permissions": null,
+          "tiles": []
+        }
+      ],
+      "framework": "react"
+    },
+    "views": [
+      {
+        "name": "TRADE_VIEW",
+        "rootTable": "TRADE",
+        "tableAliases": {
+          "TRADE": "TRADE"
+        },
+        "fields": [
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "TRADE_ID",
+            "type": "STRING",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "TRADE_TIME",
+            "type": "DATETIME",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "TRADE_TYPE",
+            "type": "ENUM",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "PRICE",
+            "type": "BIGDECIMAL",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "QUANTITY",
+            "type": "BIGDECIMAL",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "TRADE",
+            "sourceField": "TRADED",
+            "type": "BOOLEAN",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          }
+        ],
+        "join": null,
+        "snapshot": true,
+        "realtimeQueries": [
+          {
+            "queryName": "ALL_TRADES",
+            "fields": [
+              "TRADE_ID",
+              "TRADE_TIME",
+              "TRADE_TYPE",
+              "PRICE",
+              "QUANTITY",
+              "TRADED"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CONSUMER_PRICE_INDEX_VIEW",
+        "rootTable": "CONSUMER_PRICE_INDEX",
+        "tableAliases": {
+          "CONSUMER_PRICE_INDEX": "CONSUMER_PRICE_INDEX"
+        },
+        "fields": [
+          {
+            "tableAlias": "CONSUMER_PRICE_INDEX",
+            "sourceField": "INDEX_ID",
+            "type": "STRING",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "CONSUMER_PRICE_INDEX",
+            "sourceField": "RELEASE_DATE",
+            "type": "DATE",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          },
+          {
+            "tableAlias": "CONSUMER_PRICE_INDEX",
+            "sourceField": "VALUE",
+            "type": "BIGDECIMAL",
+            "viewFieldType": "TABLE",
+            "fieldAlias": null
+          }
+        ],
+        "join": null,
+        "snapshot": true,
+        "realtimeQueries": [
+          {
+            "queryName": "ALL_CONSUMER_PRICE_INDEXS",
+            "fields": [
+              "INDEX_ID",
+              "RELEASE_DATE",
+              "VALUE"
+            ]
+          }
+        ]
+      }
+    ],
+    "PBCs": [
+      {
+        "id": "pbc-auth-seed",
+        "config": {}
+      }
+    ],
+    "csv": [
+      {
+        "name": "TRADE",
+        "fields": [
+          "TRADE_TIME",
+          "TRADE_TYPE",
+          "PRICE",
+          "QUANTITY",
+          "TRADED"
+        ]
+      },
+      {
+        "name": "CONSUMER_PRICE_INDEX",
+        "fields": [
+          "RELEASE_DATE",
+          "VALUE"
+        ]
+      },
+      {
+        "name": "COUNTED",
+        "fields": [
+          "BUY_TRADED",
+          "SELL_TRADED"
+        ]
+      },
+      {
+        "name": "RIGHT",
+        "fields": [
+          "CODE",
+          "DESCRIPTION"
+        ],
+        "data": []
+      },
+      {
+        "name": "PROFILE",
+        "fields": [
+          "NAME",
+          "DESCRIPTION",
+          "STATUS"
+        ],
+        "data": []
+      },
+      {
+        "name": "PROFILE_RIGHT",
+        "fields": [
+          "PROFILE_NAME",
+          "RIGHT_CODE"
+        ],
+        "data": []
+      }
+    ],
+    "userOverrides": null,
+    "deliveryConfig": {
+      "method": "download",
+      "fileSuffix": "2025-01-27_165403",
+      "excludeGradleWrapper": false
+    },
+    "telemetry": {
+      "deviceId": "6e89db12-7d99-48b7-a986-cafafcb6273c",
+      "sessionId": "38ee25a7-a8c7-46d6-b61c-ac8fa03c9be4"
+    }
+  }
+}
