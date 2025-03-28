@@ -1,0 +1,16 @@
+dataServer {
+  query("ALL_TRADES", TRADE_VIEW) {
+    fields {
+      TRADE_ID
+      TRADE_DATE
+      TRADE_SIDE
+      TRADE_STATUS
+      PRICE
+      QUANTITY
+      INSTRUMENT_CODE
+    }
+  }
+  query("ALL_SUMMARY", COUNT_SUM_SUMMARY)
+  query("ALL_MAX_MIN_SUMMARY", MAX_MIN_SUMMARY)
+  query("ALL_REGION_BIG_COMPANY_SUMMARY", REGION_BIG_COMPANY_SUMMARY)
+}

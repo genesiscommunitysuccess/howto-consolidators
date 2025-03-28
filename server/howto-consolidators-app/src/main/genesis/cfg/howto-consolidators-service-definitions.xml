@@ -1,0 +1,3 @@
+<configuration>
+  <service host="localhost" name="HOWTO_CONSOLIDATORS_MANAGER" port="9700"/>
+</configuration>
